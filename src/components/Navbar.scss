@@ -1,0 +1,59 @@
+@import "../globle.scss";
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: $mainColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  z-index: 50;
+  .navbarlogo {
+    h2 {
+      color: white;
+      font-size: 30px;
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
+    }
+  }
+  .navbarlinks {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      display: none;
+    }
+    a {
+      text-decoration: none;
+      margin: 10px;
+      font-size: 30px;
+      color: white;
+      font-weight: 300;
+    }
+  }
+  .hanburger {
+    width: 30px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+    @include mobile {
+      display: flex;
+    }
+    div {
+      width: 100%;
+      height: 3px;
+      background-color: aliceblue;
+    }
+  }
+}
